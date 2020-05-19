@@ -18,6 +18,8 @@ def main():
 
 
 '''
+ctime은 일반 날짜가 아니다
+ctime함수의 반환값인 'Sun Oct 11 12:00:50 2015'와 같이 정확한 문구가 나온다.
 starting ...
 start loop 0 at :  Fri May 15 00:32:41 2020
 loop 0 done at :  Fri May 15 00:32:45 2020
