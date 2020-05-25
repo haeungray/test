@@ -18,3 +18,15 @@ class Retriever:
     def filename(self url, deffile = "index.htm"):
         # url path parsing
         parsedurl = urlparse(url, "http:", 0)
+        path = parsedurl[1] + parsedurl[2]
+        ext = splitext(path)
+        if ext[1] == '':
+            if newpath[-1] == '/':
+                path  = path+deffile
+            else :
+                path = path + "/" + deffile
+        dir = dirname(path)
+        if not isdir(dir):
+            if exists(dir): unlink(dir)
+            makedirs(dir)
+        return path
