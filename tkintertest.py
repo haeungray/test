@@ -30,3 +30,23 @@ class Retriever:
             if exists(dir): unlink(dir)
             makedirs(dir)
         return path
+
+    def download(self):
+        try: 
+            retval = urllib.urlretrieve(self.url, sefl.file)
+        except IOError :
+            retval = ("*** ERROR : invalid URL '%s'"%selfurl,)
+        return retval
+    
+    def parseAndGetLinks(self):
+        self.parser = HTMLParser(AbstractFormatter(DumbWriter(StringIO)))
+        self.parser.feed(open(self.file).read())
+        self.parser.close()
+        return self.parse.anchorlist
+
+class Crawler:
+    count = 0
+    def __init__(self, url):
+        self.q = [url]
+        self.seen = []
+        self.dom = urlparse(url)[1]
