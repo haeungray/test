@@ -50,3 +50,13 @@ class Crawler:
         self.q = [url]
         self.seen = []
         self.dom = urlparse(url)[1]
+
+    def getPage(self, url):
+        r = Retriever(url)
+        retval = r.download()
+        if retval[0] == '*':
+            print(retval, '...skipping parse')
+            return 
+        Crawler.count = Crawler.count +1
+        print(Crawler.count)
+        
