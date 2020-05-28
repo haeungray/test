@@ -59,4 +59,8 @@ class Crawler:
             return 
         Crawler.count = Crawler.count +1
         print(Crawler.count)
-        
+        self.seen.append(url)
+        links = r.parseAndGetLinks() 
+        for eachLink in links:
+            if eachLink[:4] != 'http' and find(eachLink, '://') ==-1:
+                eachLink = urljoin(url, eachLink)      
