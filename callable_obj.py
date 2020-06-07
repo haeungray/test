@@ -37,8 +37,18 @@ type(type)
 
 
 
+# UDF(User-Define Funtion)
+# 사용자 정의 함수 
+# 일반적으로 모듈의 최상위 레벨 부분에 정의되고, 전역 네임스페이스의 부분으로서 적재된다. 
+# 함수는 다른 함수 안에서 정의될 수 있다. 
+# 그러나 가장 안쪽에 있는 함수는 자신을 포함하는 함수의 지역 범위에 접근할 수 없다. 
+# 앞장에서 언급한 바와 같이 현재 파서 함수 안에서 정의된 모든 이름들은 지역 네임스페이스의 부분이다. 
 
-
+udf.__doc__
+udf.__name__
+udf.func_code
+udf.func_defaults # Default argument tuple
+udf.func_globals  # 함수 안에서 globals를 호출하는 것과 같다 ? ... 
 
 
 
