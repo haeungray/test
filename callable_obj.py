@@ -51,5 +51,21 @@ udf.func_defaults # Default argument tuple
 udf.func_globals  # 함수 안에서 globals를 호출하는 것과 같다 ? ... 
 
 
+# Method
+# BIM (Built-In Methods)
+# 내장형 메소드, 내장형 함수 모두 같은 속성을 공유한다. 
+# 유일한 예외는 __self__속성이 BIFs에서는 None인데 반해 BIMs에서는 파이선 객체를 가리킨다.
 
+bim.__doc__
+bim.__name__
+bim.__self__ # Method가 Bound된 형태?! 무슨말
+
+'''
+클래스와 인스턴스에 대해 데이터와 메소드 속성은 dir() 내장 함수와 dir()에 대한 인자로 
+객체를 사용해서 얻어질 수 있다는 것을 기억하자.
+
+명백히 BITs는 데이터와 메소드 속성을 나열하는 두 가지 속성을 가진다. 
+BITs의 속성들은 다음 예젱서처럼 참조나 실제 객체를 가지고 접근될 수 있다. 
+
+'''
 
